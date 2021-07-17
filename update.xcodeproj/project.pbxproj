@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A67F257D26A2393400BAAC82 /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67F257C26A2393400BAAC82 /* utilities.swift */; };
 		A6F5FF13269F4222008701E7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F5FF12269F4222008701E7 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A67F257C26A2393400BAAC82 /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
 		A6F5FF0F269F4222008701E7 /* update */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = update; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F5FF12269F4222008701E7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				A6F5FF12269F4222008701E7 /* main.swift */,
+				A67F257C26A2393400BAAC82 /* utilities.swift */,
 			);
 			path = update;
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67F257D26A2393400BAAC82 /* utilities.swift in Sources */,
 				A6F5FF13269F4222008701E7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +248,7 @@
 		A6F5FF17269F4222008701E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TWR8G6P46;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -255,6 +260,7 @@
 		A6F5FF18269F4222008701E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7TWR8G6P46;
 				ENABLE_HARDENED_RUNTIME = YES;

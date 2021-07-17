@@ -6,42 +6,12 @@
 //
 
 import Foundation
-import os
 
-print("Hello, World!")
-
-let logger = Logger(subsystem: "com.0xmachos.update", category: "command execution")
-
-func runCommand(command: String, args: [String]) -> Void {
-    
-    processingQueue.addOperation {
-        let pipe = Pipe()
-        let process = Process()
-        process.executableURL = URL(fileURLWithPath:"\(command)")
-        process.arguments = args
-        process.terminationHandler = { (process) in
-        
-            print("Finished \(!process.isRunning)")
-        }
-        process.standardOutput = pipe
-        process.waitUntilExit()
-        do{
-          try process.run()
-          let data = pipe.fileHandleForReading.readDataToEndOfFile()
-          if let output = String(data: data, encoding: String.Encoding.utf8) {
-            print(output)
-          }
-        } catch {
-            print(error)
-            logger.error("\(error.localizedDescription)")
-            exit(1)
-        }
-    }
-}
+print("[⚠️] Attempting to update stuff...")
 
 let processingQueue = OperationQueue()
+let brewArgs = ["update", "upgrade", "cleanup"]
 
-runCommand(command: "/usr/local/bin/brew", args: ["update"])
+runUpdate(commandPath: "/usr/local/bin/brew", args: brewArgs, emoji: "🍺")
 
 processingQueue.waitUntilAllOperationsAreFinished()
-
